@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base_project/view/splash/splash_screen.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_base_project/language/language_service.dart';
 
 SharedPreferences prefs;
 
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: SplashScreen(),
+       // Localization
+      locale: LocalizationService.locale,
+      fallbackLocale: LocalizationService.fallbackLocale,
+      translations: LocalizationService(),
     );
   }
 }
