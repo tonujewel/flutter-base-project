@@ -10,6 +10,8 @@ class NetworkUtils {
     } else if (connectivityResult == ConnectivityResult.wifi) {
       return true;
     }
+    
+    NetworkUtils.noInternetSnackbar();
     return false;
   }
 
@@ -18,17 +20,12 @@ class NetworkUtils {
         snackPosition: SnackPosition.BOTTOM, backgroundColor: Colors.red[200], colorText: Colors.white);
   }
 
-  // callHomeApi() {
-  //   NetworkUtils.checkInternet().then(
-  //         (intenet) {
-  //       if (intenet != null && intenet) {
-  //         // do something
-  //       } else {
-  //         NetworkUtils.noInternetSnackbar();
-  //       }
-  //     },
-  //   );
-  // }
+//..............   how to use 
+//      if (NetworkUtils.checkInternet() != false) {
+//       if (isValid()) {
+//         Get.offAll(HomePage());
+//       }
+//     }
 
 
 }
